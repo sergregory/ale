@@ -30,7 +30,7 @@ function! ale#handlers#vale#Handle(buffer, lines) abort
         \   'col': l:error['Span'][0],
         \   'end_col': l:error['Span'][1],
         \   'code': l:error['Check'],
-        \   'text': l:error['Message'],
+        \   'text': l:error['Check'] . " " . l:error['Message'],
         \   'type': ale#handlers#vale#GetType(l:error['Severity']),
         \})
     endfor

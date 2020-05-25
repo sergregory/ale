@@ -4,6 +4,9 @@
 call ale#linter#Define('markdown', {
 \   'name': 'vale',
 \   'executable': 'vale',
-\   'command': 'vale --output=JSON %t',
+\   'command': 'vale --minAlertLevel=suggestion --output=JSON %t',
 \   'callback': 'ale#handlers#vale#Handle',
 \})
+
+
+
